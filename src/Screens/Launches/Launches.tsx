@@ -11,8 +11,8 @@ function Launches() {
     }
 
     return (
-        <div className="flex flex-col px-20 w-full h-full">
-            <div className="grid grid-cols-2 gap-x-8 gap-y-8 p-4">
+        <div className="flex flex-col md:px-20 xs:px-8 sm:px-8 w-full h-full">
+            <div className="grid md:grid-cols-2 xs:grid-cols-1 sm:grid-cols-1 md:gap-x-8 sm:gap-x-4 xs:gap-x-4 md:gap-y-8 sm:gap-y-4 xs:gap-y-3 p-4">
                 {launchArray?.map((data: LaunchModel, index: number) => <LaunchCard key={index} launch={data} />)}
             </div>
         </div>
