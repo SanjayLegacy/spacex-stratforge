@@ -8,7 +8,7 @@ function HistoryCard({ history }: { history: HistoryModel }) {
     return (
         <>
             <div onClick={() => setShowModal(true)} style={{ backdropFilter: 'blur(30px)' }}
-                className="flex flex-col justify-between cursor-pointer p-3 rounded-lg max-w-60 h-64 transition ease-in-out hover:scale-105 duration-200 bg-white text-white bg-opacity-20 hover:text-black hover:bg-white">
+                className="flex flex-col justify-between cursor-pointer p-3 overflow-hidden rounded-lg max-w-60 h-64 transition ease-in-out hover:scale-105 duration-200 bg-white text-white bg-opacity-20 hover:text-black hover:bg-white">
                 <div className="font-medium text-xl">{history.title}</div>
                 <div className="flex flex-col gap-y-4">
                     <div className="font-normal">Event Unix : {dateTimeFormat1(history.event_date_unix)}</div>

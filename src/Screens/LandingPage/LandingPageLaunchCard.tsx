@@ -6,13 +6,13 @@ function LandingPageLaunchCard({ data, title }: { data: LaunchModel, title: stri
             className="relative h-screen w-full overflow-hidden justify-between items-center gap-x-6 rounded-lg text-white">
             <div
                 className="absolute left-5 top-[35rem] h-full w-full overflow-hidden bg-fixed flex flex-col items-start gap-y-2">
-                <div className="font-medium text-2xl">
+                <div className="font-medium md:text-2xl sm:text-lg">
                     {title}
                 </div>
-                <div className="font-medium text-8xl uppercase">
+                <div className="font-medium md:text-8xl sm:text-6xl uppercase">
                     {data.name}
                 </div>
-                <button type='button' className="px-4 py-2 border border-white text-xl rounded-lg hover:bg-white hover:text-black">
+                <button type='button' className="px-4 py-2 border border-white md:text-xl sm:text-lg rounded-lg hover:bg-white hover:text-black">
                     <a target="_blank" rel="noreferrer" href={data?.links.wikipedia}>Read More...</a>
                 </button>
             </div>

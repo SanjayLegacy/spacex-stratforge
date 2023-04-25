@@ -10,7 +10,7 @@ function LandingPage() {
     }
 
     return (
-        <div className="flex flex-col px-20 w-full h-full">
+        <div className="flex flex-col md:px-20 sm:px-8 w-full h-full">
             <div className="grid grid-cols-1 gap-y-8 p-4">
                 {launchArray && <LandingPageLaunchCard data={launchArray[12]} title="RECENT LAUNCH" />}
                 {launchArray && <LandingPageLaunchCard data={launchArray[13]} title="NEXT LAUNCH" />}
