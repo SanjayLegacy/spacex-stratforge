@@ -15,7 +15,7 @@ export default function NavBarSection() {
             <div className="justify-between md:px-12 mx-auto md:items-center md:flex sm:px-8 xs:px-8">
                 <div>
                     <div className="flex items-center justify-between py-3 md:py-4 md:block">
-                        <img className="w-60 cursor-pointer" src={require("../Assets/SpaceX_Logo_White.png")} alt='SpaceX' onClick={() => navigate('/')} />
+                        <img className="w-60 cursor-pointer" src={require("../Assets/SpaceX_Logo_White.png")} alt='SpaceX' onClick={() => { setNavbar(false); navigate('/'); }} />
                         <div className="md:hidden">
                             <button
                                 className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
@@ -58,13 +58,13 @@ export default function NavBarSection() {
                     <div className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? "block" : "hidden"}`}>
                         <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
                             <li className="text-gray-600 hover:text-blue-600">
-                                <NavLink to={`/rockets`} className={(navData) => navData.isActive ? activeStyle.active : activeStyle.navLink}>ROCKETS</NavLink>
+                                <NavLink onClick={() => setNavbar(false)} to={`/rockets`} className={(navData) => navData.isActive ? activeStyle.active : activeStyle.navLink}>ROCKETS</NavLink>
                             </li>
                             <li className="text-gray-600 hover:text-blue-600">
-                                <NavLink to={`/history`} className={(navData) => navData.isActive ? activeStyle.active : activeStyle.navLink}>HISTORY</NavLink>
+                                <NavLink onClick={() => setNavbar(false)} to={`/history`} className={(navData) => navData.isActive ? activeStyle.active : activeStyle.navLink}>HISTORY</NavLink>
                             </li>
                             <li className="text-gray-600 hover:text-blue-600">
-                                <NavLink to={`/launches`} className={(navData) => navData.isActive ? activeStyle.active : activeStyle.navLink}>LAUNCHES</NavLink>
+                                <NavLink onClick={() => setNavbar(false)} to={`/launches`} className={(navData) => navData.isActive ? activeStyle.active : activeStyle.navLink}>LAUNCHES</NavLink>
                             </li>
                         </ul>
                     </div>
