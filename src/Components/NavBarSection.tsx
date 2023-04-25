@@ -12,7 +12,7 @@ export default function NavBarSection() {
 
     return (
         <nav className="w-full">
-            <div className="justify-between md:px-12 mx-auto md:items-center md:flex sm:px-8">
+            <div className="justify-between md:px-12 mx-auto md:items-center md:flex sm:px-8 xs:px-8">
                 <div>
                     <div className="flex items-center justify-between py-3 md:py-4 md:block">
                         <img className="w-60 cursor-pointer" src={require("../Assets/SpaceX_Logo_White.png")} alt='SpaceX' onClick={() => navigate('/')} />

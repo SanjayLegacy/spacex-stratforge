@@ -18,7 +18,7 @@ function LandingPageLaunchCard({ data, title }: { data: LaunchModel, title: stri
             </div>
             {data.links.flickr.original[0] ?
                 <img src={data.links.flickr.original[0]} alt="" className="object-center rounded-lg h-full w-full" />
-                : <img src={require('../../Assets/rocket_placeholder.png')} alt="" className="object-center m-auto h-h-1/2" />}
+                : <img src={require('../../Assets/rocket_placeholder.png')} alt="" className="object-center m-auto h-1/2" />}
         </div>
     );
 }
