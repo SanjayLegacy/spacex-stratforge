@@ -13,18 +13,18 @@ function RocketDetails() {
     }
 
     return (
-        <div className="h-full w-full px-20">
-            <div className="font-medium text-transparent text-8xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+        <div className="h-full w-full md:px-20 xs:px-8">
+            <div className="font-medium text-transparent md:text-8xl xs:text-6xl sm:text-6xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
                 {rocketData?.name}
             </div>
             <div className="flex flex-col text-white mt-4 mb-4 pl-4 font-semibold gap-y-4">
-                <div>{rocketData?.description}</div>
+                <div className="text-justify">{rocketData?.description}</div>
                 <div>First Flight: {rocketData?.first_flight}</div>
                 <div>
                     {rocketData?.wikipedia && <a target="_blank" rel="noreferrer" className="mt-8 font-mono" href={rocketData?.wikipedia}>Read More...</a>}
                 </div>
             </div>
-            <div className="grid grid-cols-2">
+            <div className="grid md:grid-cols-2 xs:grid-cols-1 xs:gap-y-4">
                 <div>
                     <div className="mt-10 mb-6 font-medium text-transparent text-4xl bg-clip-text bg-gradient-to-r from-purple-200 to-pink-600">
                         Overview
@@ -156,7 +156,7 @@ function RocketDetails() {
             <div className="mt-12 mb-3 font-medium text-transparent text-4xl bg-clip-text bg-gradient-to-r from-purple-200 to-pink-600 uppercase">
                 GALLERY
             </div>
-            <div className="grid grid-cols-3 p-2 pl-4 rounded-lg gap-4">
+            <div className="grid md:grid-cols-3 xs:grid-cols-1 p-2 pl-4 rounded-lg gap-4">
                 {rocketData?.flickr_images.map((image, index) => (
                     <div key={index} className="flex w-full h-full flex-wrap transition ease-in-out hover:scale-105 duration-200">
                         <div className="w-full p-1 md:p-2">
