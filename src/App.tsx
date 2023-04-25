@@ -1,25 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import NavBar from './Components/NavBar';
+import Rockets from './Screens/Rocket/Rockets';
+import History from './Screens/History/History';
+import LandingPage from './Screens/LandingPage/LandingPage';
+import Launches from './Screens/Launches/Launches';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import RocketDetails from './Screens/Rocket/RocketDetails';
+import LaunchDetails from './Screens/Launches/LaunchDetails';
+import ScrollToTop from './Components/ScrollToTop';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <ScrollToTop />
+      <Routes>
+        <Route element={<NavBar />} >
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/rockets" element={<Rockets />} />
+          <Route path="/rockets/:id" element={<RocketDetails />} />
+          <Route path="/launches" element={<Launches />} />
+          <Route path="/launches/:id" element={<LaunchDetails />} />
+          <Route path="/history" element={<History />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
