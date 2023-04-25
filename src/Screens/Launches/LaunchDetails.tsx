@@ -34,7 +34,7 @@ function LaunchDetails() {
                     frameBorder="0"
                     allowFullScreen
                 />}
-                <img alt="" src={launchData?.links.patch.small} />
+                <img loading="lazy" alt="" src={launchData?.links.patch.small} />
             </div>
             {launchData?.links.flickr.original?.length ? <>
                 <div className="mt-12 mb-3 font-medium text-transparent text-4xl bg-clip-text bg-gradient-to-r from-purple-200 to-pink-600 uppercase">
@@ -45,6 +45,7 @@ function LaunchDetails() {
                         <div key={index} className="flex w-full h-full flex-wrap transition ease-in-out hover:scale-105 duration-200">
                             <div className="w-full p-1 md:p-2">
                                 <img
+                                    loading="lazy"
                                     alt=""
                                     className="block h-full w-full rounded-lg object-cover object-center"
                                     src={image} />

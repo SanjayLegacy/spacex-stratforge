@@ -19,8 +19,8 @@ function LaunchCard({ launch }: { launch: LaunchModel }) {
                 <button onClick={() => navigate(`/launches/${launch.id}`)} type='button' className="px-4 py-2 border border-white text-xl rounded-lg hover:bg-white hover:text-black">Learn More...</button>
             </div>
             {launch.links.flickr.original[0] ?
-                <img src={launch.links.flickr.original[0]} alt="" className="object-center rounded-lg h-full w-full" />
-                : <img src={require('../../Assets/rocket_placeholder.png')} alt="" className="object-center m-auto h-80" />}
+                <img loading="lazy" src={launch.links.flickr.original[0]} alt="" className="object-center rounded-lg h-full w-full" />
+                : <img loading="lazy" src={require('../../Assets/rocket_placeholder.png')} alt="" className="object-center m-auto h-80" />}
         </div>
     );
 }

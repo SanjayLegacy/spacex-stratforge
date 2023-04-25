@@ -15,7 +15,7 @@ export default function NavBarSection() {
             <div className="justify-between md:px-12 mx-auto md:items-center md:flex sm:px-8 xs:px-8">
                 <div>
                     <div className="flex items-center justify-between py-3 md:py-4 md:block">
-                        <img className="w-60 cursor-pointer" src={require("../Assets/SpaceX_Logo_White.png")} alt='SpaceX' onClick={() => { setNavbar(false); navigate('/'); }} />
+                        <img className="w-60 cursor-pointer" src={require("../Assets/SpaceX_Logo_White.png")} loading="lazy" alt='SpaceX' onClick={() => { setNavbar(false); navigate('/'); }} />
                         <div className="md:hidden">
                             <button
                                 className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"

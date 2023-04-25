@@ -150,7 +150,7 @@ function RocketDetails() {
                     </div>
                 </div>
                 <div>
-                    <img alt="" src={require("../../Assets/spacex.png")} className="bg-cover h-[90rem] object-center mx-auto" />
+                    <img loading="lazy" alt="" src={require("../../Assets/spacex.png")} className="bg-cover h-[90rem] object-center mx-auto" />
                 </div>
             </div>
             <div className="mt-12 mb-3 font-medium text-transparent text-4xl bg-clip-text bg-gradient-to-r from-purple-200 to-pink-600 uppercase">
@@ -161,6 +161,7 @@ function RocketDetails() {
                     <div key={index} className="flex w-full h-full flex-wrap transition ease-in-out hover:scale-105 duration-200">
                         <div className="w-full p-1 md:p-2">
                             <img
+                                loading="lazy"
                                 alt=""
                                 className="block h-full w-full rounded-lg object-cover object-center"
                                 src={image} />

@@ -17,7 +17,7 @@ function RocketCard({ rocket }: { rocket: RocketModel }) {
                 </div>
                 <button onClick={() => navigate(`/rockets/${rocket.id}`)} type='button' className="px-4 py-2 border border-white md:text-xl xs:text-lg rounded-lg hover:bg-white hover:text-black">Learn More...</button>
             </div>
-            <img src={rocket.flickr_images[0]} alt={require('../../Assets/rocket_placeholder.png')} className="object-cover rounded-lg h-full w-full" />
+            <img src={rocket.flickr_images[0]} loading="lazy" alt={require('../../Assets/rocket_placeholder.png')} className="object-cover rounded-lg h-full w-full" />
         </div>
     )
 }

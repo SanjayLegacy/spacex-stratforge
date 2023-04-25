@@ -17,7 +17,7 @@ function History() {
                     {historyArray?.map((data: HistoryModel, index: number) => <HistoryCard key={index} history={data} />)}
                 </div>
                 <div className="flex flex-row items-start justify-center">
-                    <img alt="" src={require("../../Assets/spacex-rocket.png")} className="bg-cover h-[90rem] object-center mx-auto" />
+                    <img alt="" loading="lazy" src={require("../../Assets/spacex-rocket.png")} className="bg-cover h-[90rem] object-center mx-auto" />
                 </div>
             </div>
         </div>
