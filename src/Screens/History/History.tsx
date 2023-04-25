@@ -47,7 +47,9 @@ function History() {
                     {filteredArray?.map((data: HistoryModel, index: number) => <HistoryCard key={index} history={data} />)}
                 </div>
                 <div className="flex flex-row items-start justify-center">
-                    <img alt="" loading="lazy" src={require("../../Assets/spacex-rocket.png")} className="bg-cover h-[90rem] object-center mx-auto" />
+                    {!search ?
+                        <img alt="" loading="lazy" src={require("../../Assets/spacex-rocket.png")} className="bg-cover h-[90rem] object-center mx-auto" />
+                        : <img alt="" loading="lazy" src={require("../../Assets/astronaut.png")} className="bg-cover object-center mx-auto" />}
                 </div>
             </div>
         </div>
