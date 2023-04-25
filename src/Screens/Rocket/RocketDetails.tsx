@@ -14,10 +14,10 @@ function RocketDetails() {
 
     return (
         <div className="h-full w-full md:px-20 xs:px-8">
-            <div className="font-medium text-transparent md:text-8xl xs:text-6xl sm:text-6xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+            <div className="font-medium text-transparent text-8xl xs:text-6xl sm:text-6xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
                 {rocketData?.name}
             </div>
-            <div className="flex flex-col text-white mt-4 mb-4 pl-4 font-semibold gap-y-4">
+            <div className="flex flex-col text-white mt-4 mb-4 pl-4 font-medium gap-y-4">
                 <div className="text-justify">{rocketData?.description}</div>
                 <div>First Flight: {rocketData?.first_flight}</div>
                 <div>
